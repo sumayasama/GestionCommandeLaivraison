@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="client/List.xhtml" x="150" y="1050" zoom="true"/>
+        <Node id="ind.xhtml" x="650" y="150" zoom="true"/>
+        <Node id="NotFoundPage.html" x="400" y="1050" zoom="true"/>
+        <Node id="template.xhtml" x="900" y="150" zoom="true"/>
+        <Node id="camion/List.xhtml" x="900" y="450" zoom="true"/>
+        <Node id="chauffeur/List.xhtml" x="400" y="300" zoom="true"/>
+        <Node id="tournee/Create.xhtml" x="1650" y="300" zoom="true"/>
+        <Node id="admin/Create.xhtml" x="650" y="750" zoom="true"/>
+        <Node id="produit/Edit.xhtml" x="900" y="750" zoom="true"/>
+        <Node id="produit/List.xhtml" x="150" y="900" zoom="true"/>
+        <Node id="client/Edit.xhtml" x="150" y="600" zoom="true"/>
+        <Node id="welcomePrimefaces.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="tournee/View.xhtml" x="650" y="300" zoom="true"/>
+        <Node id="produit/Create.xhtml" x="1150" y="600" zoom="true"/>
+        <Node id="commande/List.xhtml" x="1400" y="300" zoom="true"/>
+        <Node id="chauffeur/Edit.xhtml" x="900" y="300" zoom="true"/>
+        <Node id="home.xhtml" x="400" y="150" zoom="true"/>
+        <Node id="chauffeur/View.xhtml" x="400" y="600" zoom="true"/>
+        <Node id="tournee/Edit.xhtml" x="400" y="750" zoom="true"/>
+        <Node id="client/Create.xhtml" x="400" y="450" zoom="true"/>
+        <Node id="camion/Create.xhtml" x="400" y="900" zoom="true"/>
+        <Node id="admin/Edit.xhtml" x="1150" y="450" zoom="true"/>
+        <Node id="commande/View.xhtml" x="1900" y="150" zoom="true"/>
+        <Node id="camion/Edit.xhtml" x="900" y="600" zoom="true"/>
+        <Node id="chauffeur/Create.xhtml" x="1150" y="300" zoom="true"/>
+        <Node id="index.xhtml" x="150" y="300" zoom="true"/>
+        <Node id="tournee/List.xhtml" x="651" y="41" zoom="true"/>
+        <Node id="admin/View.xhtml" x="150" y="750" zoom="true"/>
+        <Node id="commande/Create.xhtml" x="1400" y="450" zoom="true"/>
+        <Node id="camion/View.xhtml" x="1150" y="150" zoom="true"/>
+        <Node id="produit/View.xhtml" x="150" y="450" zoom="true"/>
+        <Node id="client/View.xhtml" x="1650" y="150" zoom="true"/>
+        <Node id="commande/Edit.xhtml" x="650" y="600" zoom="true"/>
+        <Node id="admin/List.xhtml" x="1400" y="150" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>
