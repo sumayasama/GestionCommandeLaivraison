@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="en" />
+    <meta name="robots" content="all,follow" />
+
+    <meta name="author" lang="en" content="All: Your name [www.url.com]; e-mail: info@url.com" />
+    <meta name="copyright" lang="en" content="Webdesign: Nuvio [www.nuvio.cz]; e-mail: ahoj@nuvio.cz" />
+
+    <meta name="description" content="..." />
+    <meta name="keywords" content="..." />
+
+    <link rel="stylesheet" media="screen,projection" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" media="screen,projection" type="text/css" href="../css/main.css" />
+    <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="css/main-msie.css" /><![endif]-->
+    <link rel="stylesheet" media="screen,projection" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" media="print" type="text/css" href="../css/print.css" />
+    <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript">
+    
+    </script>
+ <link rel="icon" type="images/png" href="../tmp/delivery-truck.png"/>  
+ <link rel="stylesheet"  media="screen,projection" type="text/css" href="../css/mystyle.css" />   
+      
+    <title>LIVRAISON</title>
+</h:head>
+<h:body>
+
+<div id="main">
+
+    <!-- Header -->
+    <div id="header">
+
+        <h1 id="logo"><a  href="./" title="Express SZR"><img width="150" height="110" src="../tmp/delivery-truck.png" alt="" /></a></h1>
+        <hr class="noscreen" />
+
+        <!-- Navigation -->
+        <div id="nav">
+            <a href="#" id="nav-active">Express SZR<img  width="50" height="50" src="../tmp/delivery-box-icon.png" alt="" /></a> 
+           
+        </div> <!-- /nav -->
+
+    </div> <!-- /header -->
+    
+    <!-- Tray -->
+    <div id="tray">
+ <ul>
+            <li ><h:link value="Page d'acceuil" outcome="acceuil" /></li> <!-- Active page -->
+            <li ><h:link value="Client" outcome="cli" /></li>
+            <li ><h:link value="Commande" outcome="cmd" /></li>
+            <li><h:link value="Chauffeur" outcome="chauf" /></li>
+            <li><h:link value="Produit" outcome="prod" /></li>
+             <li id="tray-active"><h:link value="Tournée" outcome="tour" /></li>
+           
+        </ul>
+    <hr class="noscreen" />
+    </div> <!-- /tray -->
+
+    <!-- Promo -->
+    <div id="col-top"></div>
+    <div id="col" class="box">
+ 
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateTourneeTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                 <img id="click" src="../design/CLICK.png"></img> 
+                 <h:commandLink action="#{tourneeController.prepareList}" value="#{bundle.CreateTourneeShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateTourneeLabel_reference}" for="reference" />
+                    <h:inputText id="reference" value="#{tourneeController.selected.reference}" title="#{bundle.CreateTourneeTitle_reference}" required="true" requiredMessage="#{bundle.CreateTourneeRequiredMessage_reference}"/>
+                    <h:outputLabel value="#{bundle.CreateTourneeLabel_date}" for="date" />
+                    <h:inputText id="date" value="#{tourneeController.selected.date}" title="#{bundle.CreateTourneeTitle_date}" required="true" requiredMessage="#{bundle.CreateTourneeRequiredMessage_date}"/>
+                    <h:outputLabel value="#{bundle.CreateTourneeLabel_refCamion}" for="refCamion" />
+                    <h:inputText id="refCamion" value="#{tourneeController.selected.refCamion}" title="#{bundle.CreateTourneeTitle_refCamion}" required="true" requiredMessage="#{bundle.CreateTourneeRequiredMessage_refCamion}"/>
+                    <h:outputLabel value="#{bundle.CreateTourneeLabel_commande}" for="commande" />
+                    <h:selectOneMenu id="commande" value="#{tourneeController.selected.commande}" title="#{bundle.CreateTourneeTitle_commande}" required="true" requiredMessage="#{bundle.CreateTourneeRequiredMessage_commande}">
+                        <f:selectItems value="#{commandeController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.CreateTourneeLabel_chauffeur}" for="chauffeur" />
+                    <h:selectOneMenu id="chauffeur" value="#{tourneeController.selected.chauffeur}" title="#{bundle.CreateTourneeTitle_chauffeur}" required="true" requiredMessage="#{bundle.CreateTourneeRequiredMessage_chauffeur}">
+                        <f:selectItems value="#{chauffeurController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <br />
+                 <img id="click" src="../design/CLICK.png"></img> 
+                <h:commandLink action="#{tourneeController.create}" value="#{bundle.CreateTourneeSaveLink}" />
+                <br />
+                <br />
+               
+                <!--h:link outcome="/index" value="#{bundle.CreateTourneeIndexLink}"/-->
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+  </div> <!-- /col -->
+    <div id="col-bottom"></div>
+    
+    <hr class="noscreen" />
+    
+    <!-- 3 columns -->
+   
+    
+   
+
+    <!-- 2 columns -->
+  
+  
+
+    <hr class="noscreen" />
+
+    <!-- Footer -->
+    <div id="footer">
+
+        <!-- Do you want remove this backlinks? Look at www.nuviotemplates.com/payment.php -->
+        <p class="f-right"><a href="#">our company</a> presented by <a href="#">SUMAYA ZEINEB</a> </p>
+        <!-- Do you want remove this backlinks? Look at www.nuviotemplates.com/payment.php -->
+
+        <p>Copyright &copy;&nbsp;2014 <strong><a href="#">SUMAYA ZEINEB</a></strong>, All Rights Reserved &reg;</p>
+
+    </div> <!-- /footer -->
+
+</div> <!-- /main -->
+
+</h:body>
+</html>

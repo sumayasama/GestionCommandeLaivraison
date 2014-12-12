@@ -1,0 +1,40 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11 mai 2014, 12:05:28
+    Author     : sumaya
+*/
+
+
+ h1{
+     font-family: cursive;
+    color:#090;
+}
+#j_idt26 a,#j_idt28 a,#j_idt25 a,#j_idt29 a,#j_idt73 a,#j_idt18 a{
+  // background-color: red
+ // background:url("../design/button-blue.png") 10% 0 repeat-x  ;
+  font-size: 100%;
+    font-family: cursive;
+    text-decoration: none;
+    background-size: auto;
+    color: #90b4bd;
+}
+#FORM  a{
+  // background-color: red
+ // background:url("../design/button-blue.png") 10% 0 repeat-x  ;
+  font-size: medium;
+    font-family: cursive;
+    text-decoration: none;
+    background-size: auto;
+    color: #90b4bd;
+}
+
+#click{
+    width: 20px;
+    height:20px;
+    
+
+}
